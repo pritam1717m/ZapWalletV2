@@ -16,3 +16,11 @@ export const GET = async () => {
         status: 403
     })
 }
+export const POST = async () => {
+    // sign in logic
+    return NextResponse.json({
+        message: "Logged in"
+    }, {
+        status: 403
+    })
+}
