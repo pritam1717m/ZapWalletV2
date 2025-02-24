@@ -16,11 +16,11 @@ export const GET = async () => {
         status: 403
     })
 }
-export const POST = async () => {
-    // sign in logic
+
+export const GET = async () => {
+    const userList = await prisma.user.findMany();
     return NextResponse.json({
-        message: "Logged in"
-    }, {
-        status: 403
+        message: "User List",
+        users: userList,
     })
 }
