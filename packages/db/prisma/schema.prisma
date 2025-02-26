@@ -32,3 +32,9 @@ enum AuthType {
   Google
   Credentials
 }
+
+enum OnRampStatus {
+  Success
+  Faliure
+  Processing
+}
