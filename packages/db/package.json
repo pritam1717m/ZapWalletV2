@@ -3,9 +3,19 @@
   "version": "0.0.0",
   "dependencies": {
     "@prisma/client": "^6.4.1",
+    "@types/bcrypt": "^5.0.2",
+    "bcrypt": "^5.1.1",
     "prisma": "^6.4.1"
   },
   "exports": {
     "./client": "./src/index.ts"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
   }
 }

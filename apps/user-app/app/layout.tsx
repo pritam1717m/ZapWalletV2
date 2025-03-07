@@ -2,6 +2,7 @@ import "./globals.css";
 import "@repo/ui/styles.css";
 import type { Metadata } from "next";
 import { Providers } from "./providers";
+import { AppbarClient } from "../components/AppbarClient";
 
 export const metadata: Metadata = {
   title: "Create Turborepo",
@@ -16,7 +17,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Providers>
-        <body>{children}</body>
+        <body>
+          <div className="min-w-screen min-h-screen bg-slate-700 text-black">
+            <AppbarClient />
+            {children}
+          </div>
+        </body>
       </Providers>
     </html>
   );
