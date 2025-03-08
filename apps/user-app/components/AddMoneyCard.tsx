@@ -18,7 +18,7 @@ const SUPPORTED_BANKS = [{
 
 export const AddMoney = () => {
     const [redirectUrl, setRedirectUrl] = useState(SUPPORTED_BANKS[0]?.redirectUrl);
-    const [amount, setAmount] = useState("");
+    const [amount, setAmount] = useState("123");
     const [provider, setProvider] = useState(SUPPORTED_BANKS[0]?.name || "");
     return <Card title="Add Money">
     <div className="w-full">
