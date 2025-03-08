@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face{
+  font-family: "Gloria";
+  src:local("GloriaHallelujah-Regular"),
+  url('../public/fonts/GloriaHallelujah-Regular.ttf') 
+}
+
+@font-face{
+  font-family: "Sacramento";
+  src:local("Sacramento-Regular"),
+  url('../public/fonts/Sacramento-Regular.ttf') 
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
