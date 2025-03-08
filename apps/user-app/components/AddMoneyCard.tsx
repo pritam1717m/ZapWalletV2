@@ -17,8 +17,8 @@ const SUPPORTED_BANKS = [{
 }];
 
 export const AddMoney = () => {
-    // const [redirectUrl, setRedirectUrl] = useState(SUPPORTED_BANKS[0]?.redirectUrl);
-    const [amount, setAmount] = useState("");
+    const [redirectUrl, setRedirectUrl] = useState(SUPPORTED_BANKS[0]?.redirectUrl);
+    const [amount, setAmount] = useState("123");
     const [provider, setProvider] = useState(SUPPORTED_BANKS[0]?.name || "");
     return <Card title="Add Money">
     <div className="w-full">
@@ -29,7 +29,7 @@ export const AddMoney = () => {
             Bank
         </div>
         <Select onSelect={(value) => {
-            // setRedirectUrl(SUPPORTED_BANKS.find(x => x.name === value)?.redirectUrl || "")
+            setRedirectUrl(SUPPORTED_BANKS.find(x => x.name === value)?.redirectUrl || "")
             setProvider(SUPPORTED_BANKS.find(x => x.name === value)?.name || "")
         }} options={SUPPORTED_BANKS.map(x => ({
             key: x.id,
@@ -38,7 +38,7 @@ export const AddMoney = () => {
         <div className="flex justify-center pt-4">
             <Button onClick={async() => {
                 await onRampTransactions(Number(amount), provider)
-                // window.location.href = redirectUrl || "";
+                window.location.href = redirectUrl || "";
             }}>
             Add Money
             </Button>
