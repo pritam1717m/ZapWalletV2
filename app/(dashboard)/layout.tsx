@@ -1,8 +1,8 @@
 import { JSX } from "react";
-import { Home } from '@geist-ui/icons'
-import { Activity } from '@geist-ui/icons'
-import { RefreshCw } from '@geist-ui/icons'
 import { SidebarItem } from "../../components/SidebarItem";
+import { HomeIcon } from "@/components/ui/home";
+import { ActivityIcon } from "@/components/ui/activity";
+import { TrendingUpDownIcon } from "@/components/ui/trending-up-down";
 
 export default function Layout({
   children,
@@ -13,9 +13,9 @@ export default function Layout({
     <div className="flex">
         <div className="w-72 border-r border-slate-300 min-h-screen mr-4 pt-28">
             <div>
-                <SidebarItem href={"/dashboard"} icon={<Home />} title="Home" />
-                <SidebarItem href={"/transfer"} icon={<Activity />} title="Transfer" />
-                <SidebarItem href={"/transactions"} icon={<RefreshCw />} title="Transactions" />
+                <SidebarItem href={"/dashboard"} icon={<HomeIcon />} title="Home" />
+                <SidebarItem href={"/transfer"} icon={<ActivityIcon />} title="Transfer" />
+                <SidebarItem href={"/transactions"} icon={<TrendingUpDownIcon />} title="Transactions" />
             </div>
         </div>
             {children}

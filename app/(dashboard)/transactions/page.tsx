@@ -1,4 +1,4 @@
-import {prisma} from "@repo/db/client";
+import {prisma} from "../../../prisma/index";
 import { AddMoney } from "../../../components/AddMoneyCard";
 
 import { getServerSession } from "next-auth";
@@ -10,7 +10,7 @@ async function getBalance() {
     const session = await getServerSession(authOptions);
     const balance = await prisma.balance.findFirst({
         where: {
-            userId: Number(session?.user?.email)
+            userId: session?.user?.email || ""
         }
     });
     return {
@@ -23,7 +23,7 @@ async function getOnRampTransactions() {
     const session = await getServerSession(authOptions);
     const txns = await prisma.onRampTransaction.findMany({
         where: {
-            userId: Number(session?.user?.email)
+            userId: session?.user?.email || ""
         }
     });
     return txns.map(t => ({

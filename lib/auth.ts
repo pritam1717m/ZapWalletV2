@@ -1,9 +1,9 @@
-import { prisma } from "@repo/db/client";
+import { prisma } from "../prisma/index";
 import CredentialsProvider from "next-auth/providers/credentials";
 import EmailProvider from "next-auth/providers/email";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import { NextAuthOptions, Session, TokenSet } from "next-auth";
-import { loginWithCredentialSchema } from "@repo/types";
+import { loginWithCredentialSchema } from "../types/authentication";
 
 export const authOptions: NextAuthOptions = {
   providers: [

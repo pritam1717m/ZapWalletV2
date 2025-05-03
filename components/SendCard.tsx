@@ -1,9 +1,9 @@
 "use client"
-import { Button } from "@repo/ui/button";
-import { Card } from "@repo/ui/card";
-import { TextInput } from "@repo/ui/textinput";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import { useState } from "react";
-import { p2pTransfer } from "../app/lib/actions/transfer";
+import { p2pTransfer } from "../lib/actions/transfer";
 
 export function SendCard() {
     const [number, setNumber] = useState("");
@@ -12,11 +12,11 @@ export function SendCard() {
     return <div className="flex justify-center items-center h-[20vh]">
             <Card title="Send">
                 <div className="min-w-72 pt-2">
-                    <TextInput placeholder={"Number"} label="Number" onChange={(value) => {
-                        setNumber(value)
+                    <Input placeholder={"Number"}  onChange={(value) => {
+                        setNumber(value.target.value)
                     }} />
-                    <TextInput placeholder={"Amount"} label="Amount" onChange={(value) => {
-                        setAmount(value)
+                    <Input placeholder={"Amount"} onChange={(value) => {
+                        setAmount(value.target.value)
                     }} />
                     <div className="pt-4 flex justify-center">
                         <Button onClick={async () => {

@@ -1,4 +1,4 @@
-import { Card } from "@repo/ui/card";
+import { Card } from "@/components/ui/card";
 
 export const BalanceCard = ({amount, locked}: {
     amount: number;
