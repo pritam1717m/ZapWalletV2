@@ -1,8 +1,8 @@
-import {prisma} from './index'
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
+import { prisma } from '.'
 
 async function main() {
-    const alice = await prisma.user.upsert({
+    await prisma.user.upsert({
         where : {
             number : '1111111111'
         },

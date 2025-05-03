@@ -9,12 +9,11 @@
     "lint": "next lint"
   },
   "prisma": {
-    "seed": "ts-node --transpile-only prisma/seed.ts"
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "dependencies": {
     "@prisma/client": "6.7.0",
-    "@types/bcrypt": "^5.0.2",
-    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
     "next": "15.3.1",
     "next-auth": "^4.24.11",
     "react": "^19.0.0",
