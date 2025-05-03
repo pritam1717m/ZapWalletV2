@@ -56,7 +56,7 @@ export const AddMoney = () => {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    const {amount , provider} = form.getValues();
+    const {amount , provider} = values;
     const finalAmount = Number(amount);
     await onRampTransactions(finalAmount, provider);
     window.location.href = provider || "";

@@ -1,6 +1,5 @@
 import { prisma } from "../prisma/index";
 import CredentialsProvider from "next-auth/providers/credentials";
-import EmailProvider from "next-auth/providers/email";
 import bcrypt from "bcryptjs";
 import { NextAuthOptions, Session, TokenSet } from "next-auth";
 import { loginWithCredentialSchema } from "../types/authentication";
@@ -80,7 +79,3 @@ export const authOptions: NextAuthOptions = {
     },
   },
 };
-
-function generateAuthToken(): string {
-  return Math.floor(100000 + Math.random() * 900000).toString();
-}
