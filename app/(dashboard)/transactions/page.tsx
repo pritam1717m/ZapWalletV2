@@ -1,10 +1,10 @@
-import {prisma} from "../../../prisma/index";
-import { AddMoney } from "../../../components/AddMoneyCard";
+import {prisma} from "@/prisma";
+import { AddMoney } from "@/components/AddMoneyCard";
 
 import { getServerSession } from "next-auth";
-import { authOptions } from "../../../lib/auth";
-import { BalanceCard } from "../../../components/BalanceCard";
-import { OnRampTransactions } from "../../../components/OnRampTransactions";
+import { authOptions } from "@/lib/auth";
+import { BalanceCard } from "@/components/BalanceCard";
+import { OnRampTransactions } from "@/components/OnRampTransactions";
 
 async function getBalance() {
     const session = await getServerSession(authOptions);

@@ -1,5 +1,5 @@
 import { JSX } from "react";
-import { SidebarItem } from "../../components/SidebarItem";
+import { SidebarItem } from "@/components/SidebarItem";
 import { HomeIcon } from "@/components/ui/home";
 import { ActivityIcon } from "@/components/ui/activity";
 import { TrendingUpDownIcon } from "@/components/ui/trending-up-down";

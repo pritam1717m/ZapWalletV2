@@ -1,7 +1,7 @@
 "use server"
 import { getServerSession } from "next-auth"
 import { authOptions } from "../auth"
-import { prisma } from "@/prisma/index";
+import { prisma } from "@/prisma";
 
 export const onRampTransactions = async (amount : number, provider : string) => {
     const session = await getServerSession(authOptions);

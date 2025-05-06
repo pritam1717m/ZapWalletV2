@@ -21,7 +21,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { onRampTransactions } from "../lib/actions/onRampTransaction";
+import { onRampTransactions } from "@/lib/actions/onRampTransaction";
 
 const SUPPORTED_BANKS = [
   {

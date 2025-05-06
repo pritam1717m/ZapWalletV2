@@ -1,7 +1,7 @@
 "use server"
 import { getServerSession } from "next-auth";
 import { authOptions } from "../auth";
-import {prisma} from "@/prisma/index";
+import {prisma} from "@/prisma";
 
 export async function p2pTransfer(to: string, amount: number) {
     const session = await getServerSession(authOptions);
