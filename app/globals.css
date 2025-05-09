@@ -4,21 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @font-face{
-  font-family: "Gloria";
-  src:local("GloriaHallelujah-Regular"),
-  url('../public/fonts/GloriaHallelujah-Regular.ttf') 
-}
-
-@font-face{
-  font-family: "Sacramento";
-  src:local("Sacramento-Regular"),
-  url('../public/fonts/Sacramento-Regular.ttf') 
-}
-
-@font-face{
-  font-family: "PatuaOne";
-  src:local("PatuaOne-Regular"),
-  url('../public/fonts/PatuaOne-Regular.ttf') 
+  font-family: "CalSans";
+  src:local("CalSans-Regular"),
+  url('../public/fonts/CalSans-Regular.ttf') 
 }
 
 :root {
