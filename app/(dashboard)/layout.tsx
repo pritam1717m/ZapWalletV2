@@ -17,7 +17,7 @@ export default function Layout({
     if (!data) {
       redirect("/");
     }
-  }, []);
+  });
 
   if (!data) {
     return <></>;
