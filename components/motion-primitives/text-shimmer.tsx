@@ -30,7 +30,7 @@ function TextShimmerComponent({
     <MotionComponent
       className={cn(
         'relative inline-block bg-[length:250%_100%,auto] bg-clip-text',
-        'text-transparent [--base-color:#8cffee] [--base-gradient-color:#34bec7]',
+        'text-transparent [--base-color:#0e9fad] [--base-gradient-color:#06575e]',
         '[background-repeat:no-repeat,padding-box] [--bg:linear-gradient(90deg,#0000_calc(50%-var(--spread)),var(--base-gradient-color),#0000_calc(50%+var(--spread)))]',
         'dark:[--base-color:#34bec7] dark:[--base-gradient-color:#caf7fa] dark:[--bg:linear-gradient(90deg,#0000_calc(50%-var(--spread)),var(--base-gradient-color),#0000_calc(50%+var(--spread)))]',
         className

@@ -19,14 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Providers>
-        <body className="w-screen">
+        <body className="">
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
-            <div className="relative flex h-[40rem] w-full overflow-hidden bg-lime-50 dark:bg-black/[0.96]  antialiased justify-center">
+            <div className="relative flex w-full overflow-hidden bg-white dark:bg-black/[0.96] antialiased justify-center">
               <div
                 className={cn(
                   "pointer-events-none absolute inset-0 [background-size:40px_40px] select-none"
